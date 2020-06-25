@@ -21,21 +21,25 @@ Detecting chop-shops sites(also known as car slaghter sites) from aeriel imagery
 
 # concepts
 
-* **SSD**. a method for detecting objects in images using a single deep neural network, by discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. 
+* **SSD**: a method for detecting objects in images using a single deep neural network, by discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. 
 
-* **Transfer Learning**. This is when you borrow from an existing model by using parts of it in a new model. This is almost always better than training a new model from scratch (i.e., knowing nothing). As you will see, you can always fine-tune this second-hand knowledge to the specific task at hand. Using pretrained word embeddings is a dumb but valid example. For our image captioning problem, we will use a pretrained Encoder, and then fine-tune it as needed.
+* **Transfer Learning**: This is when you borrow from an existing model by using parts of it in a new model. This is almost always better than training a new model from scratch (i.e., knowing nothing). As you will see, you can always fine-tune this second-hand knowledge to the specific task at hand. Using pretrained word embeddings is a dumb but valid example. For our image captioning problem, we will use a pretrained Encoder, and then fine-tune it as needed.
 
 # Overview
 
 In this project iv'e Trained a Single-Shot-Detector and feature detection model to detect chop shops in aerial imagery.
 The whole process was made using arcgis.learn library, developed by esri, and is based on fast.ai. 
 
-
-*Below is an example of a 2D robot world with landmarks (purple x's) and the robot (a red 'o') located and found using *only* sensor and motion data collected by that robot. This is just one example for a 50x50 grid world; in your work you will likely generate a variety of these maps.*
+**question 1:** How does a Chop-shop looks like?
 
 <p align="center">
-<img src="images/robot_world.png" width=50% height=50% >
+<img src="images/1.jfif" width=50% height=50% >
 </p>
+
+At first glance, it looks like different chop-shops might have different background, structure and spread.
+
+**Question 2:** What similar areas might be found in the aerial imagery (or, what kind of false positive should we expect)?
+
 
 Project Instructions
 The project will be broken up into three Python notebooks; the first two are for exploration of provided code, and a review of SLAM architectures, only Notebook 3 and the robot_class.py file will be graded:
