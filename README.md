@@ -16,7 +16,7 @@
 
 
 # Objective
-Detecting chop-shops sites(also known as car slaghter sites) from aeriel imagery, Using single shot detector
+Detecting chop-shops sites (also known as car slaghter sites) from aeriel imagery, using single shot detector and feature classifier for better accuracy.
 
 <p align="center">
 <img src="images/SSD_NO_CLASSES.JPG" width=50% height=50% >
