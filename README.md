@@ -74,9 +74,9 @@ we decided to provide true negatives samples, and train the model again, using t
 Project Instructions
 The project is be broken up into two Python notebooks; the first two are for the SSD implementation and the other is for the feature classifire:
 
-[__Notebook 1__](.SSD_FINAL.ipynb) : SSD
+[__Notebook 1__](./SSD_FINAL.ipynb) : SSD
 
-[__Notebook 2__](.FC_FINAL.ipynb) : feature classifier
+[__Notebook 2__](./FC_FINAL.ipynb) : feature classifier
 
 
 You can also view the helper files writen as part of this project in the moduls library.
