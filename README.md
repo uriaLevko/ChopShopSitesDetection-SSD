@@ -8,13 +8,12 @@
 
 [***Overview***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD-#overview)
 
-[***Implementation***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#implementation)
+<!-- [***Implementation***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#implementation) 
 
-[***Training***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#training)
+<!-- [***Training***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning ## Training SSD - no true negative samples)
 
-[***Inference***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#inference)
+<!-- [***Inference***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#inference) -->
 
-[***Frequently Asked Questions***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#faqs)
 
 # Objective
 Detecting chop-shops sites(also known as car slaghter sites) from aeriel imagery, Using single shot detector
@@ -39,21 +38,47 @@ The whole process was made using arcgis.learn library, developed by esri, and is
 At first glance, it looks like different chop-shops might have different background, structure and spread.
 
 **Question 2:** What similar areas might be found in the aerial imagery (or, what kind of false positive should we expect)?
+<table><tr>
+<td> <img src="images/4.jfif" title="Dirt piles" style="width: 350px;"/> </td>
+    <td></td><td></td>
+<td> <img src="images/5.jfif" title="Junk yard" style="width: 250px;"/> </td>
+    <td></td><td></td>
+</tr></table>
 
+<table> <tr>
+<td><img src="images/44.jfif" title="Construction bolders" style="width: 350px;"/> </p></td>
+    <td></td><td></td>
+<td> <img src="images/45.jfif" title="Crops" style="width: 250px;"/> </td>
+    <td></td><td></td>
+</tr></table>
+
+
+<table><tr>
+<td> <img src="images/6.jfif" title="Parking areas" style="width: 350px;"/> </td>
+    <td></td><td></td>
+<td> <img src="images/46.jfif" title="Parking areas" style="width: 250px;"/> </td>
+    <td></td><td></td>
+</tr></table>
+
+## Training SSD - no true negative samples
+
+We began by creating samples of chop shops, using the Training Samples Manager in ArcGIS Pro. We had a relatively small area to track samples at, and we were only able to detect around 120 samples of chop-shops.
+we also added a second class of parking places. Due to their similarity, and a relativatly small amount of samples, it was naive to expect the model would be able to provide good results.
+After examination of the results, there were too many false positives.we decided to provide true negatives samples.
+we decided to provide true negatives samples, and train the model again, using the new samples as background.
+
+<p align="center">
+<img src="images/7.jfif" width=50% height=50%  title="export training samples manager">
+</p>
 
 Project Instructions
-The project will be broken up into three Python notebooks; the first two are for exploration of provided code, and a review of SLAM architectures, only Notebook 3 and the robot_class.py file will be graded:
+The project is be broken up into two Python notebooks; the first two are for the SSD implementation and the other is for the feature classifire:
 
 [__Notebook 1__](.SSD_FINAL.ipynb) : SSD
 
-[__Notebook 2__](./FeatureC_presentation.ipynb) : feature classifier
+[__Notebook 2__](.FC_FINAL.ipynb) : feature classifier
 
-[__Notebook 3__](./3.%20Landmark%20Detection%20and%20Tracking%20(2).ipynb) : Landmark Detection and Tracking 
 
-You can also view the helper files writen as part of this project.
+You can also view the helper files writen as part of this project in the moduls library.
 
-[__helper__](./helpers.py) : Init module for robot control
-
-[__Robot__](./robot_class.py): Init module for robot sensing 
-
-LICENSE: This project is licensed under the terms of the MIT license.
+LICENSE: This project is licensed under the terms of the esri license product. There is no approval to copy or use this code without permission
