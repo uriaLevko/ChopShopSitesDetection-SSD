@@ -18,6 +18,10 @@
 # Objective
 Detecting chop-shops sites(also known as car slaghter sites) from aeriel imagery, Using single shot detector
 
+<p align="center">
+<img src="images/SSD_NO_CLASSES.JPG" width=50% height=50% >
+</p>
+
 # concepts
 
 * **SSD**: a method for detecting objects in images using a single deep neural network, by discretizes the output space of bounding boxes into a set of default boxes over different aspect ratios and scales per feature map location. At prediction time, the network generates scores for the presence of each object category in each default box and produces adjustments to the box to better match the object shape. 
