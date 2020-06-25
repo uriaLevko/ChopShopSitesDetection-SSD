@@ -2,11 +2,11 @@
 
 # Contents
 
-[***Objective***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD-#objective)
+[***Objective***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD#objective)
 
-[***Concepts***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD-#concepts)
+[***Concepts***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD#concepts)
 
-[***Overview***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD-#overview)
+[***Overview***](https://github.com/uriaLevko/ChopShopSitesDetection-SSD#overview)
 
 <!-- [***Implementation***](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning#implementation) 
 
